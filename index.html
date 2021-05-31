@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vojtaano | Dev</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="h-screen">
+        <!-- header, asi není nutný, ale mám to tam. :D -->
+        <header class="sticky top-0">
+            <!-- navigacka, kdyz je to vetsi, tak flex, jinak pod sebou gridy s jednim columnem na radek -->
+            <nav class="bg-indigo-400 md:flex grid grid-cols-1">
+                <!-- divize, cely radek jakoby a jeho properety -->
+                <div class="md:mr-auto md:mb-auto text-4xl p-3 flex">
+                    <a href="#" class="mt-auto mb-auto text-white text-6xl" style="font-family: 'Pattaya';">Vojtaano</a>
+                    <!-- ikona a jeji pozicovani, kdyz vetsi, tak zmizi, padding aby slo lepe kliknout -->
+                    <a id="hamburger-ikona" href="#" class="mt-auto mb-auto ml-auto md:hidden p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:shadow-2xl text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- neocislovany seznam, ml-auto at je vpravo, a jinak taky pozicovani, at to nejak vypada -->
+                <ul id="seznam-navigace"
+                    class="md:flex md:ml-auto text-center md:mt-auto md:mb-auto text-lg font-semibold h-0 md:mr-6 overflow-hidden">
+                    <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Domů</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Web developování</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Cestování</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="md:grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid md:mt-60 mt-24">
+            <div id="main" class="grid justify-center items-center">
+                <img src="/assets/profilovka.gif" alt="Vojtaano" class="rounded-full h-48 w-48 hover:bg-red-600">
+                <a id="javascript" href="#"
+                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">JS</a>
+                <a id="html" href="#"
+                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">HTML</a>
+                <a id="css" href="#"
+                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">CSS</a>
+            </div>
+            <h6
+                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-relaxed mt-24 md:mt-0 self-center">
+                <span class="rucka inline-block">👋</span>, Vojtěch Balata jméno mé a<svg
+                    xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-red-700 inline mx-1 animate-pulse"
+                    viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                        clip-rule="evenodd" />
+                </svg>programátoruju.
+            </h6>
+        </div>
+    </section>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+@media only screen and (min-width: 768px) {
+    #seznam-navigace {
+      display: flex;
+      height: auto !important;
+    }
+  }
+
+  .caraPod {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    position: relative;
+  }
+  .caraPod:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .caraPod:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+  body{
+    scroll-behavior: smooth;
+  }
+  
+  #seznam-navigace {
+    transition: all 1s ease-in-out;
+  }
+
+  #main > * {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #javascript {
+    animation: spinAround 10s linear infinite;
+  }
+  #html {
+    animation: spinAround 10s linear infinite;
+    animation-delay: -3.33s;
+  }
+  #css {
+    animation: spinAround 10s linear infinite;
+    animation-delay: -6.66s;
+  }
+
+  @keyframes spinAround {
+    from {
+      transform: rotate(0deg) translate(200px);
+    }
+    to {
+      transform: rotate(360deg) translate(200px);
+    }
+  }
+
+  @keyframes spinAroundB {
+    from {
+      transform: rotate(0deg) translate(210px);
+    }
+    to {
+      transform: rotate(360deg) translate(210px);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #javascript {
+      animation: spinAroundB 10s linear infinite;
+    }
+    #html {
+      animation: spinAroundB 10s linear infinite;
+      animation-delay: -3.33s;
+    }
+    #css {
+      animation: spinAroundB 10s linear infinite;
+      animation-delay: -6.66s;
+    }
+  }
+
+#main > *:hover{
+  font-size: 2.5rem;
+}
+
+.rucka{
+  animation: rucka 1s infinite linear;
+}
+
+@keyframes rucka {
+  0%{transform: rotate(0);}
+  50%{transform: rotate(28deg);}
+  100%{transform: rotate(0);}
+}
+
