@@ -92,6 +92,7 @@
 
 .rucka{
   animation: rucka 1s infinite linear;
+  transform-origin: 70% 70%;
 }
 
 @keyframes rucka {
