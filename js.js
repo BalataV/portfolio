@@ -29,3 +29,10 @@ hambac.addEventListener("click", function(event){
 })
 
 
+window.addEventListener("scroll", function(event){
+    let scrolled = window.scrollY
+
+    if (scrolled > window.innerHeight) {
+        
+        
+}})
