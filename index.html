@@ -22,7 +22,7 @@
 <body>
     <section class="h-screen">
         <!-- header, asi není nutný, ale mám to tam. :D -->
-        <header class="sticky top-0">
+        <header class="sticky top-0 z-10">
             <!-- navigacka, kdyz je to vetsi, tak flex, jinak pod sebou gridy s jednim columnem na radek -->
             <nav class="bg-indigo-400 md:flex grid grid-cols-1">
                 <!-- divize, cely radek jakoby a jeho properety -->
@@ -42,7 +42,7 @@
                     class="md:flex md:ml-auto text-center md:mt-auto md:mb-auto text-lg font-semibold h-0 md:mr-6 overflow-hidden">
                     <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
                     <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Domů</a></li>
-                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Web developování</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#WebDev">Web developování</a></li>
                     <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
                     <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Cestování</a></li>
                 </ul>
@@ -59,7 +59,7 @@
                     class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">CSS</a>
             </div>
             <h6
-                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-relaxed mt-24 md:mt-0 self-center">
+                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-relaxed mt-24 md:mt-0 self-center z-0">
                 <span class="rucka inline-block">👋</span>, Vojtěch Balata jméno mé a<svg
                     xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-red-700 inline mx-1 animate-pulse"
                     viewBox="0 0 20 20" fill="currentColor">
@@ -68,6 +68,14 @@
                         clip-rule="evenodd" />
                 </svg>programamování.
             </h6>
+        </div>
+    </section>
+    <section class="h-screen">
+        <div class="grid grid-cols-2 grid-rows-2">
+            <div class="col-start-1 col-span-2 place-self-center">
+                <h1 id="WebDev" class="font-mono text-5xl text-indigo-600">Web Development</h1>
+            </div>
+            <div></div>
         </div>
     </section>
     <script src="js.js"></script>
