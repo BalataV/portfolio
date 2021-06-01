@@ -20,35 +20,36 @@
 </head>
 
 <body>
-    <section class="h-screen">
+    <header class="sticky top-0 z-10">
+        <!-- navigacka, kdyz je to vetsi, tak flex, jinak pod sebou gridy s jednim columnem na radek -->
+        <nav class="bg-indigo-600 md:flex grid grid-cols-1">
+            <!-- divize, cely radek jakoby a jeho properety -->
+            <div class="md:mr-auto md:mb-auto text-4xl p-3 flex">
+                <a href="#" class="mt-auto mb-auto text-white text-6xl" style="font-family: 'Pattaya';">Vojtaano</a>
+                <!-- ikona a jeji pozicovani, kdyz vetsi, tak zmizi, padding aby slo lepe kliknout -->
+                <a id="hamburger-ikona" href="#" class="mt-auto mb-auto ml-auto md:hidden p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:shadow-2xl text-white" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </a>
+            </div>
+            <!-- neocislovany seznam, ml-auto at je vpravo, a jinak taky pozicovani, at to nejak vypada -->
+            <ul id="seznam-navigace"
+                class="md:flex md:ml-auto text-center md:mt-auto md:mb-auto text-lg font-semibold h-0 md:mr-6 overflow-hidden">
+                <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
+                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Home</a></li>
+                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#WebDev">Web Development</a>
+                </li>
+                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
+                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Travelling</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="md:h-screen h-screen">
         <!-- header, asi není nutný, ale mám to tam. :D -->
-        <header class="sticky top-0 z-10">
-            <!-- navigacka, kdyz je to vetsi, tak flex, jinak pod sebou gridy s jednim columnem na radek -->
-            <nav class="bg-indigo-400 md:flex grid grid-cols-1">
-                <!-- divize, cely radek jakoby a jeho properety -->
-                <div class="md:mr-auto md:mb-auto text-4xl p-3 flex">
-                    <a href="#" class="mt-auto mb-auto text-white text-6xl" style="font-family: 'Pattaya';">Vojtaano</a>
-                    <!-- ikona a jeji pozicovani, kdyz vetsi, tak zmizi, padding aby slo lepe kliknout -->
-                    <a id="hamburger-ikona" href="#" class="mt-auto mb-auto ml-auto md:hidden p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hover:shadow-2xl text-white" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </a>
-                </div>
-                <!-- neocislovany seznam, ml-auto at je vpravo, a jinak taky pozicovani, at to nejak vypada -->
-                <ul id="seznam-navigace"
-                    class="md:flex md:ml-auto text-center md:mt-auto md:mb-auto text-lg font-semibold h-0 md:mr-6 overflow-hidden">
-                    <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
-                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Domů</a></li>
-                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#WebDev">Web developování</a></li>
-                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
-                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Cestování</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="md:grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid md:mt-60 mt-24">
+        <div class="md:grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid md:h-full mt-16 md:mt-0">
             <div id="main" class="grid justify-center items-center">
                 <img src="/assets/profilovka.gif" alt="Vojtaano" class="rounded-full h-48 w-48 hover:bg-red-600">
                 <a id="javascript" href="#"
@@ -59,23 +60,87 @@
                     class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">CSS</a>
             </div>
             <h6
-                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-relaxed mt-24 md:mt-0 self-center z-0">
-                <span class="rucka inline-block">👋</span>, Vojtěch Balata jméno mé a<svg
-                    xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-red-700 inline mx-1 animate-pulse"
-                    viewBox="0 0 20 20" fill="currentColor">
+                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-normal mt-24 md:mt-0 self-center z-0">
+                <span class="rucka inline-block">👋</span>, I am Vojtaano and I<svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-9 w-9 text-red-700 inline mx-1 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
                         d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                         clip-rule="evenodd" />
-                </svg>programamování.
+                </svg>programming.
             </h6>
         </div>
     </section>
-    <section class="h-screen">
-        <div class="grid grid-cols-2 grid-rows-2">
-            <div class="col-start-1 col-span-2 place-self-center">
-                <h1 id="WebDev" class="font-mono text-5xl text-indigo-600">Web Development</h1>
+    <section>
+        <div class="grid md:grid-cols-2 auto-rows-auto grid-cols-1">
+            <div class="md:col-start-1 md:col-span-2 justify-self-center md:mt-0 md:mb-4">
+                <h1 id="WebDev" class="font-mono text-5xl text-indigo-600 text-center">Web Development</h1>
             </div>
-            <div></div>
+            <div class="mt-4 self-center md:order-1 order-2">
+                <img src="/assets/programming.jpg" alt="Kódění">
+            </div>
+            <div class="self-center md:mb-0 md:mt-0 mt-10 mb-10 md:order-2">
+                <h3 class="font-mono md:text-5xl text-indigo-700 text-4xl text-center p-1 md:p-4 order-1">
+                    HTML
+                </h3>
+                <ul class="text-indigo-700 text-center text-2xl md:text-2xl md:mb-0 mb-4">
+                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                            class="mr-2 text-yellow-900 inline icon icon-tabler icon-tabler-device-desktop-analytics"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="4" width="18" height="12" rx="1"></rect>
+                            <path d="M7 20h10"></path>
+                            <path d="M9 16v4"></path>
+                            <path d="M15 16v4"></path>
+                            <path d="M9 12v-4"></path>
+                            <path d="M12 12v-1"></path>
+                            <path d="M15 12v-2"></path>
+                            <path d="M12 12v-1"></path>
+                        </svg>Know how to Google</li>
+                </ul>
+            </div>
+            <div class="self-center md:mb-0 md:mt-0 mt-10 mb-10 md:order-3 order-3">
+                <h3 class="font-mono md:text-5xl text-indigo-700 text-4xl text-center p-1 md:p-4">CSS
+                </h3>
+                <ul class="text-indigo-700 text-center text-2xl md:text-2xl md:mb-0 mb-4">
+                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                            class="mr-2 text-yellow-900 inline icon icon-tabler icon-tabler-device-desktop-analytics"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="4" width="18" height="12" rx="1"></rect>
+                            <path d="M7 20h10"></path>
+                            <path d="M9 16v4"></path>
+                            <path d="M15 16v4"></path>
+                            <path d="M9 12v-4"></path>
+                            <path d="M12 12v-1"></path>
+                            <path d="M15 12v-2"></path>
+                            <path d="M12 12v-1"></path>
+                        </svg>Know how to Google</li>
+                </ul>
+            </div>
+            <div class="self-center md:order-4 order-4"><img src="/assets/programming_1.jpg" alt="Kódění 2"></div>
+            <div class="order-5 self-center md:mb-0 md:mt-0 mt-10 mb-10 md:order-5">
+                <h3 class="font-mono md:text-5xl text-indigo-700 text-4xl text-center p-1 md:p-4">JavaScript
+                </h3>
+                <ul class="text-indigo-700 text-center text-2xl md:text-2xl md:mb-0 mb-4">
+                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                            class="mr-2 text-yellow-900 inline icon icon-tabler icon-tabler-device-desktop-analytics"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <rect x="3" y="4" width="18" height="12" rx="1"></rect>
+                            <path d="M7 20h10"></path>
+                            <path d="M9 16v4"></path>
+                            <path d="M15 16v4"></path>
+                            <path d="M9 12v-4"></path>
+                            <path d="M12 12v-1"></path>
+                            <path d="M15 12v-2"></path>
+                            <path d="M12 12v-1"></path>
+                        </svg>Know how to Google</li>
+                </ul>
+            </div>
+            <div class="md:order-4 order-3 self-center order-5"><img src="/assets/programming_2.jpg" alt="Kódění 2"></div>
         </div>
     </section>
     <script src="js.js"></script>
