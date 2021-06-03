@@ -14,12 +14,12 @@ let jeNavViditelna = false
 let licka = document.querySelectorAll("#seznam-navigace li")
 
 //co se má dít po kliknutí na hambac
-hambac.addEventListener("click", function(event){
+hambac.addEventListener("click", function (event) {
     seznamNav.classList.toggle('opened')
     let otevreno = seznamNav.classList.value.includes('opened')
 
     if (otevreno) {
-        seznamNav.style.height ='136px'
+        seznamNav.style.height = '136px'
         hambac.children[0].children[0].attributes[3].value = 'M6 18L18 6M6 6l12 12'
     }
     else if (!otevreno) {
@@ -28,11 +28,20 @@ hambac.addEventListener("click", function(event){
     }
 })
 
+let divokejBill = document.querySelector("#tlacitko-up")
 
-window.addEventListener("scroll", function(event){
-    let scrolled = window.scrollY
+window.addEventListener("scroll", function (event) {
 
-    if (scrolled > window.innerHeight) {
-        
-        
-}})
+    if (window.scrollY > window.innerHeight) {
+        divokejBill.style.display = "block"
+    }
+
+    if (window.scrollY < window.innerHeight) {
+        divokejBill.style.display = "none"
+    }
+}
+)
+
+divokejBill.addEventListener("click", function (event) {
+    divokejBill.style.display = "none"
+})

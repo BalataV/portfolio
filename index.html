@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 
-<body style="scroll-behavior: smooth;">
+<body>
     <header class="sticky top-0 z-10" id="hlavicka">
         <!-- navigacka, kdyz je to vetsi, tak flex, jinak pod sebou gridy s jednim columnem na radek -->
         <nav class="bg-indigo-500 md:flex grid grid-cols-1">
@@ -50,7 +50,7 @@
     <section class="h-screen">
         <!-- header, asi není nutný, ale mám to tam. :D -->
         <div class="md:grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid md:h-full mt-16 md:mt-0">
-            <div id="main" class="grid justify-center items-center">
+            <div id="main" class="grid justify-center items-center overflow-x-hidden">
                 <img src="/assets/profilovka.gif" alt="Vojtaano" class="rounded-full h-48 w-48 hover:bg-red-600">
                 <a id="javascript" href="#"
                     class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">JS</a>
@@ -60,13 +60,13 @@
                     class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">CSS</a>
             </div>
             <h6
-                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-normal mt-24 md:mt-0 self-center z-0">
+                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-normal mt-36 md:mt-0 self-center z-0">
                 <span class="rucka inline-block">👋</span>, I am Vojtaano and I<svg xmlns="http://www.w3.org/2000/svg"
                     class="h-9 w-9 text-red-700 inline mx-1 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
                         d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
                         clip-rule="evenodd" />
-                </svg>programming.
+                </svg>creating Websites.
             </h6>
         </div>
     </section>
@@ -97,8 +97,8 @@
                             <path d="M15 12v-2"></path>
                             <path d="M12 12v-1"></path>
                         </svg>Know how to Google
-                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-auto ml-auto mt-5 h-6 w-6 mb-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-auto ml-auto mt-5 h-6 w-6 mb-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M16 17l-4 4m0 0l-4-4m4 4V3" />
                         </svg>
@@ -152,16 +152,23 @@
                             <path d="M15 12v-2"></path>
                             <path d="M12 12v-1"></path>
                         </svg>Know Courses on YouTube
-                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-auto ml-auto mt-5 h-6 w-6 mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                          </svg>
-                        Know Courses on YouTube.</li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-auto ml-auto mt-5 h-6 w-6 mb-5" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                        Know Courses on YouTube.
+                    </li>
                 </ul>
             </div>
             <div class="md:order-4 self-center order-5"><img src="/assets/programming_2.jpg" alt="Kódění 2"></div>
         </div>
     </section>
-    <a href="#hlavicka" class="nahoru-na-stranku"></a>
+    <a href="#" class="fixed right-6 bottom-6 hidden text-indigo-700" id="tlacitko-up">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </a>
     <script src="js.js"></script>
 </body>
 

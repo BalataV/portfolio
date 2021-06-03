@@ -93,7 +93,9 @@
 
 @keyframes rucka {
   0%{transform: rotate(0);}
-  50%{transform: rotate(28deg);}
+  25%{transform: rotate(28deg);}
+  50%{transform: rotate(14deg);}
+  75%{transform: rotate(35deg);}
   100%{transform: rotate(0);}
 }
 
