@@ -36,15 +36,28 @@
                 </a>
             </div>
             <!-- neocislovany seznam, ml-auto at je vpravo, a jinak taky pozicovani, at to nejak vypada -->
-            <ul id="seznam-navigace"
-                class="md:flex md:ml-auto text-center md:mt-auto md:mb-auto text-lg font-semibold h-0 md:mr-6 overflow-hidden">
-                <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
-                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Home</a></li>
-                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#WebDev">Web Development</a>
-                </li>
-                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
-                <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Travelling</a></li>
-            </ul>
+            <div class="seznam-navigace md:flex">
+                <ul class="md:flex md:ml-auto text-center text-lg font-semibold md:mr-6 md:place-self-center">
+                    <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Home</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#WebDev">Web Development</a>
+                    </li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
+                    <li class="mb-1.5 md:mb-0"><a class="px-3 uppercase caraPod" href="#">Travelling</a></li>
+                </ul>
+            </div>
+
+            <div
+                class="seznam-navigace-videno hidden h-screen bg-indigo-500 w-full justify-center pb-20 absolute top-20">
+                <ul class="flex flex-col items-start justify-center text-xl h-full font-semibold">
+                    <!-- mtcka a mbcka aby to nebylo tak u sebe, kdyz je to pod sebou, zvetseny text -->
+                    <li class="mb-1.5 md:mb-0 py-8"><a class="px-3 uppercase caraPod" href="#">Home</a></li>
+                    <li class="mb-1.5 md:mb-0 py-8"><a class="px-3 uppercase caraPod" href="#WebDev">Web Development</a>
+                    </li>
+                    <li class="mb-1.5 md:mb-0 py-8"><a class="px-3 uppercase caraPod" href="#">Sport</a></li>
+                    <li class="mb-1.5 md:mb-0 py-8"><a class="px-3 uppercase caraPod" href="#">Travelling</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section class="h-screen">
@@ -52,22 +65,19 @@
         <div class="md:grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 grid md:h-full mt-16 md:mt-0">
             <div id="main" class="grid justify-center items-center overflow-x-hidden">
                 <img src="/assets/profilovka.gif" alt="Vojtaano" class="rounded-full h-48 w-48 hover:bg-red-600">
-                <a id="javascript" href="#"
-                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">JS</a>
-                <a id="html" href="#"
-                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">HTML</a>
-                <a id="css" href="#"
-                    class="text-indigo-400 hover:text-indigo-600 text-3xl md:text-4xl font-semibold block">CSS</a>
             </div>
-            <h6
-                class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-normal mt-36 md:mt-0 self-center z-0">
-                <span class="rucka inline-block">👋</span>, I am Vojtaano and I<svg xmlns="http://www.w3.org/2000/svg"
-                    class="h-9 w-9 text-red-700 inline mx-1 animate-pulse" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                        clip-rule="evenodd" />
-                </svg>creating Websites.
-            </h6>
+            <div class="mt-20 md:mt-auto md:mb-auto">
+                <h6
+                    class="text-indigo-600 text-4xl text-center font-mono px-3 md:px-0 md:pr-2 leading-normal md:mt-0 self-center z-0">
+                    <span class="rucka inline-block">👋</span>, I am Vojtaano and I<svg
+                        xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-red-700 inline mx-1 animate-pulse"
+                        viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                            clip-rule="evenodd" />
+                    </svg>creating Websites.
+                </h6>
+            </div>
         </div>
     </section>
     <section>

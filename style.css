@@ -1,7 +1,12 @@
-@media only screen and (min-width: 768px) {
-    #seznam-navigace {
-      display: flex;
-      height: auto !important;
+@media only screen and (max-width: 768px) {
+    .seznam-navigace {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .seznam-navigace-videno {
+      display: none !important;
     }
   }
 
@@ -29,57 +34,17 @@
     left: 0; 
   }
   
-  #seznam-navigace {
-    transition: all 1s ease-in-out;
+  .seznam-navigace {
+    transition: left 1s ease-in-out;
+  }
+
+  .seznam-navigace.opened{
+    
   }
 
   #main > * {
     grid-column: 1;
     grid-row: 1;
-  }
-
-  #javascript {
-    animation: spinAround 10s linear infinite;
-  }
-  #html {
-    animation: spinAround 10s linear infinite;
-    animation-delay: -3.33s;
-  }
-  #css {
-    animation: spinAround 10s linear infinite;
-    animation-delay: -6.66s;
-  }
-
-  @keyframes spinAround {
-    from {
-      transform: rotate(0deg) translate(200px);
-    }
-    to {
-      transform: rotate(360deg) translate(200px);
-    }
-  }
-
-  @keyframes spinAroundB {
-    from {
-      transform: rotate(0deg) translate(210px);
-    }
-    to {
-      transform: rotate(360deg) translate(210px);
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    #javascript {
-      animation: spinAroundB 10s linear infinite;
-    }
-    #html {
-      animation: spinAroundB 10s linear infinite;
-      animation-delay: -3.33s;
-    }
-    #css {
-      animation: spinAroundB 10s linear infinite;
-      animation-delay: -6.66s;
-    }
   }
 
 #main > *:hover{

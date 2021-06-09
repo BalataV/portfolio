@@ -5,13 +5,13 @@ let hambac = document.querySelector("#hamburger-ikona")
 let krizek = document.querySelector("#krizek")
 
 //beru si ul I guess
-let seznamNav = document.querySelector("#seznam-navigace")
+let seznamNav = document.querySelector(".seznam-navigace-videno")
 
 //promenna na uchovani hodnoty true
 let jeNavViditelna = false
 
 //vemi si licka
-let licka = document.querySelectorAll("#seznam-navigace li")
+let licka = document.querySelectorAll(".seznam-navigace li")
 
 //co se má dít po kliknutí na hambac
 hambac.addEventListener("click", function (event) {
@@ -19,11 +19,11 @@ hambac.addEventListener("click", function (event) {
     let otevreno = seznamNav.classList.value.includes('opened')
 
     if (otevreno) {
-        seznamNav.style.height = '136px'
+        seznamNav.style.display = 'flex'
         hambac.children[0].children[0].attributes[3].value = 'M6 18L18 6M6 6l12 12'
     }
     else if (!otevreno) {
-        seznamNav.style.height = '0'
+        seznamNav.style.display = 'none'
         hambac.children[0].children[0].attributes[3].value = 'M4 6h16M4 12h16M4 18h16'
     }
 })
