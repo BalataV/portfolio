@@ -34,12 +34,13 @@
     left: 0; 
   }
   
-  .seznam-navigace {
-    transition: left 1s ease-in-out;
+  .seznam-navigace-videno.opened{
+    right: 0%;
   }
 
-  .seznam-navigace.opened{
-    
+  .seznam-navigace-videno{
+    right: 100%;
+    transition: right 1s ease;
   }
 
   #main > * {
