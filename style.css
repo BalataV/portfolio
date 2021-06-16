@@ -65,3 +65,10 @@
   100%{transform: rotate(0);}
 }
 
+.anchor{
+  display: block;
+  top: -95px;
+  position: relative;
+  visibility: hidden;
+}
+
