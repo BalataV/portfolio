@@ -71,3 +71,8 @@
   position: relative;
   visibility: hidden;
 }
+
+.vyska {
+  height: 100vh;
+  height: calc(100% - 84px);
+}
